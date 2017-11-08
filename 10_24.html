@@ -1,42 +1,217 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+<style>
+  /*모든 a태그 링크 줄 없에기*/
+  a{text-decoration:none}
+  #fullscreen{
+    background-color: #fafafa;
+    overflow: scroll;
+    position: relative;
+    padding-bottom: 150px;
+  }
+  #maindoor{
+    overflow: scroll;
+  }
+
+  .pick img{
+    float: left;
+    margin-right: 10px;
+    width: 454px;
+    height: 618px;
+    padding: 100px;
+  }
+  .login{
+      display: inline-block;
+      border: 1px solid #aaa;
+      margin-top: 100px;
+      background-color: white;
+      padding: 50px 50px 20px 50px;
+  }
+
+  .logo > img{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  .or {
+    background-color: #aaa;;
+    height: 1px;
+    margin: 30px 0;
+    position: relative;
+  }
+  .or p{
+    margin: 0;
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    /*margin-left: -13.5px;*/
+    background-color: white;
+    padding: 0 10px;
+    color: #aaa;
+  }
+  .Information input:nth-child(1) {
+    width: 100%;
+    border: 1px solid #aaa;
+    padding-left: 5px;
+    margin-bottom: 10px;
+  }
+  .Information input:nth-child(2) {
+    width: 100%;
+    border: 1px solid #aaa;
+    padding-left: 5px;
+    margin-bottom: 10px;
+  }
+  .Information input:nth-child(3) {
+    -webkit-appearance: none;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 26px;
+    outline: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+  }
+  input[type="text"] {
+    background: #fafafa;
+    padding: 9px 0 7px 8px;
+  }
+
+  input[type="password"] {
+    background: #fafafa;
+    padding: 9px 0 7px 8px;
+  }
+
+  input[value="로그인"] {
+    background: #3897f0;
+    border-color: #3897f0;
+    color: #fff;
+  }
+
+
+  .Facebooklogin > *{
+    margin-top: 18px;
+    margin-left: 81.195px;
+    margin-bottom: 12px;
+  }
+
+  .emptyPW > * {
+    margin-top: 18px;
+    margin-left: 110.195px;
+    margin-bottom: 12px;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #003569;
+  }
+
+  .emptyID > * {
+    border : 1px solid #aaa;
+    width: 404px;
+    padding: 10px;
+  }
+  .emptyID > p {
+    text-align: center;
+  }
+  .DownLoadLink > p {
+    border: 1px solid #fafafa;
+    padding-left: 145px;
+  }
+  .LinkPicture p {
+    border: 1px solid #fafafa;
+    padding-left: 72.5px;
+  }
+  #footbottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 100px;
+    padding-left: 100px;
+  }
+  #footbottom img {
+    padding-left: 300px;
+    padding-top: 50px;
+  }
+
+
+
+
+
+
+
+</style>
 </head>
-<body>
-  <img src="핸드폰.jpg" alt="왼쪽에 넣을거"><br />
 
-      <img src="instar.jpg" alt="제발"><br />
-      <input type="text" name="nickname" placeholder="전화번호, 사용자, 이름 또는 이메일"><br />
-      <input type="password" name="password" placeholder="비밀번호"><br />
-      <input type="submit" name="login" value="로그인"><br />
-      <p>또는</p><br />
-      <a href="https://www.facebook.com/"><img src="페이스북로그.jpg" alt="로고"> Facebook으로 로그인</a><br />
-      <a href="https://www.instagram.com/accounts/password/reset/"> 비밀번호를 잊으셨나요?</a> <br />
+<body id="fullscreen">
+  <div id="allanything">
+  <!--핸드폰 사진-->
+  <div class="pick">
+        <img src="폰.png" alt="왼쪽에 넣을거"><br />
+  </div>
+  <!--로그인 박스-->
+  <main id="maindoor">
+    <div class="login">
+      <div class="logo">
+        <!-- 454 618 -->
+        <img src="인스타그램_큰로고.png" alt="제발"><br />
+      </div>
+      <div class="Information">
+        <input type="text" name="nickname" placeholder="전화번호, 사용자, 이름 또는 이메일">
+        <input type="password" name="password" placeholder="비밀번호">
+        <input type="submit" name="login" value="로그인"><br />
+      </div>
+      <div class="centerline"></div>
+      <div class="or">
+        <p>또는</p>
+      </div>
+      <div class="Facebooklogin">
+        <a href="https://www.facebook.com/"><img src="페이스북.png" alt="로고">Facebook으로 로그인</a><br />
+      </div>
+      <div class="emptyPW">
+        <a href="https://www.instagram.com/accounts/password/reset/"> 비밀번호를 잊으셨나요?</a><br />
+      </div>
+    </div>
 
-      <p>계정이 없으신가요? <a href="https://www.instagram.com/"> 가입하기</a></p><br />
-  
-  <p>앱을 다운로드하세요</p><br />
-  <a href="https://itunes.apple.com/app/instagram/id389801252?mt=8">
-  <img src="애플.jpg" alt="앱스토어로가세요"></a>
-  <a href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26utm_medium%3Dbadge">
-  <img src="구글.jpg" alt="플레이스토어로가세요"><br /></a>
-  <th><a href="https://www.instagram.com/about/us/">INSTAGRAM 정보</a></th>
-  <th><a href="https://help.instagram.com/">지원</a></th>
-  <th><a href="http://blog.instagram.com/">블로그</a></th>
-  <th><a href="https://instagram-press.com/">홍보 센터</a></th>
-  <th><a href="https://www.instagram.com/developer/">API</a></th>
-  <th><a href="https://www.instagram.com/about/jobs/">채용정보</a></th>
-  <th><a href="https://help.instagram.com/155833707900388">개인정보처리방침</a></th>
-  <th><a href="https://help.instagram.com/478745558852511">약관</a></th>
-  <th><a href="https://www.instagram.com/explore/locations/">디렉터리</a></th>
-  <th>언어</th>
-  <img src="로고.jpg" alt="인스타로고입니다.">
-
+  <!--계정찾기 박스-->
+  <div class="emptyID"">
+    <p>계정이 없으신가요? <a href="https://www.instagram.com/">
+    가입하기</a></p>
+  </div>
+  <!--앱 다운로드 링크-->
+  <div class="DownLoadLink">
+    <p>앱을 다운로드하세요</p>
+    <a href="https://itunes.apple.com/app/instagram/id389801252?mt=8">
+      <div class="LinkPicture">
+      <p>
+      <img src="애플.png" alt="앱스토어로가세요"></a>
+      <a href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26utm_medium%3Dbadge">
+      <img src="구글.png" alt="플레이스토어로가세요"></a></p>
+      </div>
+    </div>
+  </main>
+  </div>
+  <!--인스타그램 정보-->
+  <footer id="footbottom">
+    <a href="https://www.instagram.com/about/us/">INSTAGRAM 정보</a>
+    <a href="https://help.instagram.com/">지원</a>
+    <a href="http://blog.instagram.com/">블로그</a>
+    <a href="https://instagram-press.com/">홍보 센터</a>
+    <a href="https://www.instagram.com/developer/">API</a>
+    <a href="https://www.instagram.com/about/jobs/">채용정보</a>
+    <a href="https://help.instagram.com/155833707900388">개인정보처리방침</a>
+    <a href="https://help.instagram.com/478745558852511">약관</a>
+    <a href="https://www.instagram.com/explore/locations/">디렉터리</a> 언어
+    <img src="인스타그램_작은로고.png" alt="인스타로고입니다.">
+  </footer>
 </body>
-
 </html>
